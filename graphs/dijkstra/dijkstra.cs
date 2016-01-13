@@ -1,6 +1,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 
@@ -39,7 +40,8 @@ class P
 
 			for(int i = 0; i < E; ++i)
 			{
-				string[] r = stream.ReadLine().Split(' ');
+				string[] r = stream.ReadLine().Trim().Split(' ');
+				r = r.Where (x => x.Length > 0).ToArray();
 
 				var edge = new Edge()
 				{
@@ -106,8 +108,8 @@ class P
 
 	static void Main()
 	{
-		Graph graph = Graph.Read(new StreamReader("./tinyEWD.txt"));
+		Graph graph = Graph.Read(new StreamReader("./mediumEWD.txt"));
 		// Console.WriteLine(graph);
-		Console.WriteLine(ShortestPath(graph, 0, 6));
+		Console.WriteLine(ShortestPath(graph, 0, 1));
 	}
 }
