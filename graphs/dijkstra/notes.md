@@ -3,6 +3,12 @@ This contains solution files and explanation: http://algs4.cs.princeton.edu/44sp
 
 # File Format
 
+A graph G = {V, E} serialized as:
+
+Number of V
+Number of E
+`E` edges with `src, dst, weight`
+
 # Answer Key
 
  *  % java DijkstraSP tinyEWD.txt 0
