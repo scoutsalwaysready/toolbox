@@ -1,4 +1,7 @@
 // Question from: https://leetcode.com/problems/combination-sum/
+// I don't think DP can be applied here, or DP might only save marginal time and still
+// have a worst case cost of 2^n. This is because we keep track of sets, not sum (no folding
+// of the solution space tree).
 
 public class Solution 
 {
